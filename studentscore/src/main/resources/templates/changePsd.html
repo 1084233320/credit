@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/front.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>登录</title>
+    <script src="/js/login.js"></script>
+</head>
+<body>
+
+
+<div class="m-container-small m-padded-tb-massive" style="max-width: 50em !important;">
+    <div class="ui container">
+        <br><br><br><br><br><br>
+        <div class="ui center aligned grid">
+            <div class="column">
+                <h2 class="ui teal image header">
+                    <div class="content">
+                        请修改您的密码
+                    </div>
+                </h2>
+                <form class="ui large form" method="post" action="">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="password" placeholder="新密码">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="psd" placeholder="确认密码">
+                            </div>
+                        </div>
+                        <button class="ui fluid large teal submit button" name="login">
+                            <a href="/logout">修改</a>
+                        </button>
+                    </div>
+
+
+
+
+                </form>
+
+                <!--                <div class="ui message">
+                                    New to us? <a href="#">Sign Up</a>
+                                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

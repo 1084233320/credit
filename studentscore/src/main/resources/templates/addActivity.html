@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布活动</title>
+    <meta name = "viewport"content="width= device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/front.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+<nav class="ui inverted attached segment ">
+    <div class="ui container ">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">"后台管理"</h2>
+            <a href="/index" class="item"><i class="home icon"></i>首页</a>
+            <a href="/showAll" class="item"><i class="info icon"></i>查看所有</a>
+            <a href="/credit" class="item"><i class="idea icon"></i>学分审核</a>
+            <a href="/addActivity" class="active item"><i class="tags icon"></i>发布活动</a>
+            <a href="/mine" class="item"><i class="user icon"></i>个人中心</a>
+        </div>
+    </div>
+
+</nav>
+
+<br>
+<div class="m-container-small m-padded-tb-massive" style="max-width: 100em !important;">
+    <div class="ui center container">
+        <div class="ui center aligned grid">
+            <div class="column">
+                <h2 class="ui teal image header">
+                    <div class="content">
+                        添加活动
+                    </div>
+                </h2>
+                <form class="ui large form" method="post" action="">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="name" placeholder="活动名称">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="text" name="hold" placeholder="举办方">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="text" name="time" placeholder="举办时间">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="text" name="location" placeholder="举办地点">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="text" name="content" placeholder="简介">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="text" name="credit" placeholder="应加学分">
+                            </div>
+                        </div>
+                        <button class="ui fluid large teal submit button">提交</button>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

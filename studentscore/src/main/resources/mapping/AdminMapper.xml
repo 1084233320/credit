@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.studentscore.demo.mapper.AdminMapper">
+    <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
+
+
+    <select id="findPsdById" resultType="String">
+        select password from adminStudent where id=#{id}
+    </select>
+
+    <select id="findNameById" resultType="String">
+        select name from adminStudent where id=#{id}
+    </select>
+
+    <select id="findAllStudent" resultType="com.example.studentscore.demo.po.Student">
+        select * from student
+    </select>
+
+    <select id="findDissStudent" resultType="com.example.studentscore.demo.po.Student">
+        select * from student where credit &lt;= 4.0
+    </select>
+
+    <select id="findAllNewCredit" resultType="com.example.studentscore.demo.po.credit.MysqlCredit">
+        select * from credit
+    </select>
+
+
+    <insert id="insertActivity">
+        insert into activity(name,hold,time,location,content,credit)
+        values (#{name},#{hold},#{time},#{location},#{content},#{credit})
+    </insert>
+
+
+    <update id="changePsd">
+        update adminstudent
+            set password=#{password}
+            where id=#{id}
+    </update>
+
+</mapper>

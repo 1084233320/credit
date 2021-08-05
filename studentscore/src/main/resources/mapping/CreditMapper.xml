@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.studentscore.demo.mapper.CreditMapper">
+    <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
+
+    <insert id="insertCredit">
+        insert into credit(id,practice,game,business,papers,knowledge,research,report,lecture,other)
+        values (#{id},#{practiveJSON},#{gameJSON},#{businessJSON},#{papersJSON},#{knowledgeJSON},#{researchJSON},#{reportJSON},#{lectuerJSON},#{othersJson})
+    </insert>
+
+    <select id="findCreditIsExist" resultType="int">
+        select count(*) from student where id = #{id}
+    </select>
+
+
+    <select id="findPracticeByid" resultType="String">
+        select practice from credit where id=#{id}
+    </select>
+    <select id="findGameByid" resultType="String">
+        select game from credit where id=#{id}
+    </select>
+    <select id="findBusinessByid" resultType="String">
+        select business from credit where id=#{id}
+    </select>
+    <select id="findPapersByid" resultType="String">
+        select papers from credit where id=#{id}
+    </select>
+    <select id="findKnowledgeByid" resultType="String">
+        select knowledge from credit where id=#{id}
+    </select>
+    <select id="findResearchByid" resultType="String">
+        select research from credit where id=#{id}
+    </select>
+    <select id="findReportByid" resultType="String">
+        select report from credit where id=#{id}
+    </select>
+    <select id="findLectureByid" resultType="String">
+        select lecture from credit where id=#{id}
+    </select>
+    <select id="findOtherByid" resultType="String">
+        select other from credit where id=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息填写</title>
+    <meta name = "viewport"content="width= device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/css/front.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+<nav class="ui inverted attached segment ">
+    <div class="ui container ">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">"后台管理"</h2>
+            <a href="/index" class="item"><i class="home icon"></i>首页</a>
+            <a href="/showAll" class="item"><i class="info icon"></i>查看所有</a>
+            <a href="/credit" class="item"><i class="idea icon"></i>学分审核</a>
+            <a href="/addActivity" class="item"><i class="tags icon"></i>发布活动</a>
+            <a href="/mine" class="active item"><i class="user icon"></i>个人中心</a>
+        </div>
+    </div>
+
+
+</nav>
+<br>
+
+
+
+
+<div class="ui grid">
+    <div class="six wide column right aligned"></div>
+    <div class="five wide column">
+        <div class="ui top attached segment">
+            <div class="ui header"><h1><span th:text = "${name}">,</span>的个人中心</h1></div>
+        </div>
+        <div class="ui attached segment">
+            <p>不知道写什么，但是不写又太空了</p>
+            <p>这里是他的座右铭</p>
+        </div>
+        <div class="ui attached segment center aligned">
+
+            <div class="ui fluid vertical menu">
+                <a href="/changePsd" class="item">
+                    <i class="large key icon"></i>
+                    <i>修改密码</i>
+                </a>
+            </div>
+            <div class="ui fluid vertical menu">
+                <a href="#" class="item">
+                    <i class="large address card outline icon"></i>
+                    <i>修改个人信息</i>
+                </a>
+            </div>
+            <div class="ui fluid vertical menu">
+                <a href="/login" class="item">
+                    <i class="large address card outline icon"></i>
+                    注销
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.studentscore.demo.mapper.StudentMapper">
+
+
+
+    <update id="changeStudent">
+        update student
+            set password=#{password}
+            where id=#{id}
+    </update>
+
+    <update id="updateCredit">
+        update student
+            set credit=#{credit}
+            where id=#{id}
+    </update>
+
+
+    <select id="findAll" resultType="com.example.studentscore.demo.po.Student">
+        select * from student
+    </select>
+
+    <select id="findAllActicity" resultType="com.example.studentscore.demo.po.Activity">
+        select * from activity
+    </select>
+
+    <insert id="insertStudent">
+        insert into student(name,password)
+        values (#{name},#{password})
+    </insert>
+
+
+
+
+
+
+
+
+    <select id="findStudentbyName" resultType="com.example.studentscore.demo.po.Student">
+        select * from student where name=#{name}
+    </select>
+
+
+    <select id="findAll_delete" resultType="com.example.studentscore.demo.po.AdminStudent">
+        select * from student1
+    </select>
+
+
+    <select id="findStudentbyId" resultType="com.example.studentscore.demo.po.Student">
+        select * from student where id=#{id}
+    </select>
+
+
+    <select id="findPsdById" resultType="String">
+        select password from student where id=#{id}
+    </select>
+
+    <select id="findAllStudent" resultType="com.example.studentscore.demo.po.Student">
+        select * from student
+    </select>
+
+    <select id="checking" resultType="String">
+        select password from student where name=#{name}
+    </select>
+
+
+
+
+
+
+</mapper>
